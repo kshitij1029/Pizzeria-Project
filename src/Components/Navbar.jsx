@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 
 const Navbar = () => {
   return (
-    <div className='bg-red-600 w-screen flex justify-around p-4 items-center fixed top-0 right-0 left-0 z-30'>
+    <div className='w-screen flex justify-around p-4 items-center fixed top-0 right-0 left-0 z-30'>
         <img className='h-15 min-w-15 mr-2' src={logo}/>
         <div>
             <ul className='flex justify-between p-2 flex-wrap text-white'>
