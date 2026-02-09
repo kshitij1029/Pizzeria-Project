@@ -1,7 +1,7 @@
 import React from 'react'
 import ExtraInfo from './ExtraInfo'
 
-const Orders = () => {
+const Services = () => {
   return (
     <div>
         <ExtraInfo/>
@@ -9,4 +9,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export default Services
