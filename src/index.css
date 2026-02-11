@@ -7,6 +7,16 @@
     .nav:hover::after{
         @apply w-full
     }
+    .btn::before{
+        @apply content-[''] absolute top-0 bottom-0 left-0 right-0 h-full w-[0%] -z-20 transition-[0.5s] bg-linear-to-r from-[#900]  to-[#f00] delay-150
+    }
+    .btn:hover::before{
+        @apply w-full 
+    }
+    .btn:hover{
+        @apply text-[#ffffff] scale-110
+    }
+    
 }
 
 @layer base{
