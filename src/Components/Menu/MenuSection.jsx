@@ -1,24 +1,17 @@
 import React, { useState } from 'react'
+import Buttons from './Buttons';
+import RenderComponent from './RenderComponent';
 
+const buttons =["Veg", "Non-Veg", "Beverages", "Breads and Dips", "Deserts"];
 
 const MenuSection = () => {
-  const [isFill, setIsFill] = useState(false);
-  const fill = ()=>{
-    if(!isFill) setIsFill(true);
-  }
-  const Unfill = ()=>{
-    if(isFill) setIsFill(false);
-  }
+  const [isSelected, setIsSelected] = useState(0);
   return (
-    <div className='mt-5'>
+    <div className='flex flex-col mt-5 items-center'>
       <div className='flex justify-evenly items-center'>
-        <button className='btn mx-5 shadow-sm shadow-[#900] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Veg</button>
-        <button className='btn mx-5 shadow-sm shadow-[#900] border-[#ffcc00] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Non-Veg</button>
-        <button className='btn mx-5 shadow-sm shadow-[#900] border-[#ffcc00] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Beverages</button>
-        <button className='btn mx-5 shadow-sm shadow-[#900] border-[#ffcc00] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Breads and Dips</button>
-        <button className='btn mx-5 shadow-sm shadow-[#900] border-[#ffcc00] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Deserts</button>
-        <button className='btn mx-5 shadow-sm shadow-[#900] border-[#ffcc00] py-2 px-6 rounded-3xl relative overflow-hidden z-20 transition-[0.5s] bg-transparent'>Specialized</button>
+        <Buttons btn={buttons} isSelected={isSelected} setIsSelected={setIsSelected}/>
       </div>
+      <RenderComponent index={isSelected}/>
     </div>
   )
 }
