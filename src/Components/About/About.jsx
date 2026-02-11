@@ -1,7 +1,7 @@
 import React from 'react'
+import about_img from '../../assets/about-img.png'
 import Rating from './Rating'
-import Services from '../Services'
-import about_img from '../assets/about-img.png'
+import Services from './Services'
 
 
 const About = () => {

@@ -1,8 +1,9 @@
 import './App.css'
-import About from './Components/About'
-import Hero from './Components/Hero'
-import Menu from './Components/Menu'
-import Navbar from './Components/Navbar'
+import About from './Components/About/About'
+import Hero from './Components/Hero/Hero'
+import Navbar from './Components/Navbar/Navbar'
+import Menu from './Components/Menu/Menu'
+
 
 
 function App() {

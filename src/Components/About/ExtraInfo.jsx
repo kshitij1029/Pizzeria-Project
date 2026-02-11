@@ -1,9 +1,9 @@
 import React from 'react'
 import ExtraInfoCard from './ExtraInfoCard'
-import pizza from '../assets/pizza.png'
-import pizza3 from '../assets/pizza3.png'
-import salad1 from '../assets/salad1.png'
-import delivery1 from '../assets/delivery1.png'
+import pizza from '../../assets/pizza.png'
+import pizza3 from '../../assets/pizza3.png'
+import salad1 from '../../assets/salad1.png'
+import delivery1 from '../../assets/delivery1.png'
 
 const ExtraInfo = () => {
   return (
