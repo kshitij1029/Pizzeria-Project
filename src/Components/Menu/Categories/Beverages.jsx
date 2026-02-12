@@ -7,9 +7,9 @@ import chocolateShake from '../../../assets/chocolateShake.jpg'
 const Beverages = () => {
   return (
     <div className='flex flex-wrap'>
-      <Card image={coke} head="Makhni Blast" ingredients="abcde" price={129}/>
-      <Card image={mangoShake} head="Makhni Blast" ingredients="abcde" price={129}/>
-      <Card image={chocolateShake} head="Makhni Blast" ingredients="abcde" price={129}/>
+      <Card image={coke} head="Coke" ingredients="Ultimate Coke" price={79}/>
+      <Card image={mangoShake} head="Mango Shake" ingredients="Mango Shake with caramel syrup" price={99}/>
+      <Card image={chocolateShake} head="Chocolate Shake" ingredients="KitKat Chocolate Shake" price={99}/>
       
     </div>
   )

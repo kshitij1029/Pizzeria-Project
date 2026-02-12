@@ -6,7 +6,7 @@ import marg from '../../../assets/marg.jpg'
 import Onions from '../../../assets/Onions.jpg'
 import deluxe from '../../../assets/deluxe.jpg'
 
-const Veg = () => {
+const Veg = ({idx}) => {
   return (
     <div className='flex flex-wrap'>
       <Card image={makhni} head="Makhni Blast" ingredients="Paneer, Cheese, Makhni Sauce, Bayleaf Powder" price={299}/>

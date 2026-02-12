@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Card = ({image, head, ingredients, price}) => {
+const Card = ({image, head, ingredients, price, idx1}) => {
     const [isHover, setIsHover] = useState(false);
     const appear =()=>{
        setIsHover(true);
