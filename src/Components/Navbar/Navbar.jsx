@@ -12,6 +12,7 @@ const Navbar = () => {
                 <li className='mx-4 relative nav text-[16px] font-bold'>OUR MENU</li>
                 <li className='mx-4 relative nav text-[16px] font-bold'>DISCOUNTS</li>
                 <li className='mx-4 relative nav text-[16px] font-bold'>SHOP</li>
+                <li className='mx-4 relative nav text-[16px] font-bold'>REVIEWS</li>
                 <li className='mx-4 relative nav text-[16px] font-bold'>CONTACT US</li>
                 <li className='mx-4 pb-1.5 text-[16px] font-bold'><i className="fa-solid fa-cart-arrow-down hover:scale-170 hover: transition hover:ease-in-out hover:duration-300 "></i></li>
             </ul>

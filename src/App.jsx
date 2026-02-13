@@ -6,6 +6,7 @@ import Menu from './Components/Menu/Menu'
 import Discount from './Components/Discounts/Discount'
 import Shop from './Components/Shop/Shop'
 import Contact from './Components/Contact/Contact'
+import Review from './Components/Review/Review'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Menu/>
       <Discount/>
       <Shop/>
+      <Review/>
       <Contact/>
     </>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
 import app from '../../assets/appDownload.png'
 import playStore from '../../assets/playStore.png'
-import shop from '../../assets/shop.png'
+import shop from '../../assets/shop1.png'
 
 const Shop = () => {
   return (
-    <div className='flex justify-center items-center bg-[#ffcc00] px-5 pt-7'>
+    <div className='flex justify-center items-center bg-[#ffcc00] p-4 pb-3'>
         <div className='flex flex-col w-[50%]'>
             <h2 className='font-bold text-[#6f2f03]'>DOWNLOAD MOBILE APP AND</h2>
             <h1 className='font-extrabold bg-clip-text text-transparent bg-linear-to-r from-[#281702] to-[#7d3b0f] text-[40px]'>AVAIL MORE EXCITING DISCOUNTS</h1>
