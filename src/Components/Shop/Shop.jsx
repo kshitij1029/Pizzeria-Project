@@ -16,7 +16,7 @@ const Shop = () => {
             </div>
         </div>
         <div>
-            <img className='h-[500px] ml-10' src={shop}></img>
+            <img className='h-125 ml-10' src={shop}></img>
         </div>
     </div>
   )

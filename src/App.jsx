@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Menu from './Components/Menu/Menu'
 import Discount from './Components/Discounts/Discount'
 import Shop from './Components/Shop/Shop'
+import Contact from './Components/Contact/Contact'
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Menu/>
       <Discount/>
       <Shop/>
+      <Contact/>
     </>
   )
 }
