@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
 @layer utilities{
-    .nav::after{
+    .nav1::after{
         @apply content-[''] bg-amber-400 h-0.75 w-[0%] left-0 bottom-0 rounded-xl absolute duration-300
     }
-    .nav:hover::after{
+    .nav1:hover::after{
+        @apply w-full
+    }
+    .nav2::after{
+        @apply content-[''] bg-[#ffffff] h-0.75 w-[0%] left-0 bottom-0 rounded-xl absolute duration-300
+    }
+    .nav2:hover::after{
         @apply w-full
     }
     .btn::before{

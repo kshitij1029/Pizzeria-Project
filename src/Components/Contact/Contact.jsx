@@ -4,7 +4,7 @@ import contact_back from '../../assets/contact-back2.png'
 
 const Contact = () => {
   return (
-    <div className='flex justify-center items-center p-3  bg-cover overflow-hidden' style={{backgroundImage: `url(${contact_back})`}} >
+    <div className='Contact flex justify-center items-center p-3  bg-cover overflow-hidden' style={{backgroundImage: `url(${contact_back})`}} >
         <div className='flex flex-col items-center w-[60%] '>
           <h1 className='font-extrabold text-cyan-800 inline-block mt-5 text-[40px] '>DELIVERY IN 30 MIN !!</h1>
           <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis repellat expedita recusandae cupiditate maxime voluptatibus debitis provident voluptates, nostrum facilis numquam vitae veritatis voluptatem illum dolore! Ipsam, placeat quae.</p>

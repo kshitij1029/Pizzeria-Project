@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Buttons from './Buttons';
 import RenderComponent from './RenderComponent';
 
-const buttons =["Veg", "Non-Veg", "Beverages", "Breads and Dips", "Deserts"];
+const buttons =["Non-Veg", "Veg", "Beverages", "Breads and Dips", "Deserts"];
 
 const MenuSection = () => {
   const [isSelected, setIsSelected] = useState(0);

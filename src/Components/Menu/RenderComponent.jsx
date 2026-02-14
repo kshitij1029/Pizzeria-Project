@@ -8,9 +8,9 @@ import Deserts from '../Menu/Categories/Deserts'
 
 const RenderComponent = ({index}) => {
   switch (index) {
-    case 0: return <Veg/>
+    case 0: return <NonVeg/>
         break;
-    case 1: return <NonVeg/>
+    case 1: return <Veg/>
         break;
     case 2: return <Beverages/>
         break;
