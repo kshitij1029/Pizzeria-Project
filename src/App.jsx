@@ -7,6 +7,7 @@ import Discount from './Components/Discounts/Discount'
 import Shop from './Components/Shop/Shop'
 import Contact from './Components/Contact/Contact'
 import Review from './Components/Review/Review'
+import Footer from './Components/Footer/Footer'
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Shop/>
       <Review/>
       <Contact/>
+      <Footer/>
     </>
   )
 }

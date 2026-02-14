@@ -26,6 +26,9 @@
     h2{
         @apply text-[24px]
     }
+    .heading{
+        @apply mb-5 text-slate-800 font-medium text-[22px]
+    }
 }
 
 @theme{
