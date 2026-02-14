@@ -18,14 +18,14 @@ const Sliding = () => {
   return (
     <div className='flex flex-col justify-center items-center w-full'>
       <div className='flex justify-evenly items-center w-full'>
-        <div className='bg-amber-400 rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer' onClick={moveLeft}>
+        <div className='bg-[#900] text-white rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer hover:scale-75 hover:transition hover:duration-300 hover:ease-in-out' onClick={moveLeft}>
           <i className="fa-solid fa-less-than"></i>
         </div>
         <div className='flex w-7xl justify-between'>
           <img className='h-100 w-155 ' src={arr[imgIdx]}/>
           <img className='h-100 w-155 ' src={arr[imgIdx+1]}/>
         </div>
-        <div className='bg-amber-400 rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer' onClick={moveRight}>
+        <div className='bg-[#900] text-white rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer hover:scale-75 hover:transition hover:duration-300 hover:ease-in-out' onClick={moveRight}>
           <i className="fa-solid fa-greater-than"></i>
         </div>
       </div>
