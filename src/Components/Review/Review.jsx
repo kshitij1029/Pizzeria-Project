@@ -26,12 +26,12 @@ const Review = () => {
   return (
     <div className='bg-[url("https://www.foodrepublic.com/img/gallery/how-to-portion-out-pizzas-for-20-very-hungry-friends/l-intro-1701270198.jpg")] object-cover h-100 w-full flex flex-col justify-center items-center '>
         <div className='flex justify-around items-center  w-full'>
-          <div className={`rounded-4xl p-3 cursor-pointer ${isFirst ? "invisible" : ""}`} onClick={moveLeft}>
-            <i className="text-white fa-solid fa-less-than"></i>
+          <div className={`rounded-4xl p-3 cursor-pointer  ${isFirst ? "invisible" : ""}`} onClick={moveLeft}>
+            <i className="text-slate-300 hover:text-white fa-solid fa-less-than text-xl"></i>
           </div>
           <Comments img={icon[isIndex]} comment={comment[isIndex]} name={name[isIndex]}/>
           <div className={`'rounded-4xl p-3 cursor-pointer ${isLast ? "invisible" : ""}`} onClick={moveRight}>
-            <i className='text-white fa-solid fa-greater-than' ></i>
+            <i className='text-slate-300 hover:text-white fa-solid fa-greater-than text-xl' ></i>
           </div>
         </div>
         <Dots2 index={isIndex}/>

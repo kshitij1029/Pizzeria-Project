@@ -27,3 +27,16 @@
         @apply text-[24px]
     }
 }
+
+@theme{
+    --animate-pizzaslide: pizzaslide 7s linear infinite;
+
+    @keyframes pizzaslide {
+        from {
+            transform: translateX(-100vw);
+        }
+        to{
+            transform: translateX(100vw);
+        }
+    }
+}
