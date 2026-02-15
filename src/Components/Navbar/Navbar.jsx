@@ -3,12 +3,6 @@ import logo from '../../assets/logo.png'
 import {Link} from 'react-scroll'
 
 const Navbar = () => {
-  const [isSelected, setIsSelected] = useState(false);
-  function openCart(){
-    if(!isSelected) setIsSelected(true);
-    else setIsSelected(false);
-  }
-
   const [sticky, setSticky] = useState(false);
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
@@ -27,7 +21,7 @@ const Navbar = () => {
                 <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Shop' smooth={true} offset={-100} duration={500}>SHOP</Link></li>
                 <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Review' smooth={true} offset={-80} duration={500}>REVIEWS</Link></li>
                 <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Contact' smooth={true} offset={-90} duration={500}>CONTACT US</Link></li>
-                <li className='mx-4 pb-1.5 text-[16px] font-bold' onClick={openCart}><i className="fa-solid fa-cart-arrow-down hover:scale-170 hover: transition hover:ease-in-out hover:duration-300 "></i></li>
+                <li className='mx-4 pb-1.5 text-[16px] font-bold'><i className="fa-solid fa-cart-arrow-down hover:scale-170 hover: transition hover:ease-in-out hover:duration-300 "></i></li>
             </ul>
         </nav>
     </div>
