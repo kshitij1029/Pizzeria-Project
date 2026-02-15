@@ -14,9 +14,9 @@ const ExtraInfo = () => {
           <img className='h-[32%] w-[32%]' src={pizza}/>
         </div>
         <div className='bg-[#ffcc00] flex p-10'>
-          <ExtraInfoCard extraImg={pizza3} heading="ORIGINAL" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum non eum ad modi eos?"/>
-          <ExtraInfoCard extraImg={salad1} heading="QUALITY FOOD" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum non eum ad modi eos?"/>
-          <ExtraInfoCard extraImg={delivery1} heading="FAST DELIVERY" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum non eum ad modi eos?"/>
+          <ExtraInfoCard extraImg={pizza3} heading="ORIGINAL" text="True to our roots with secret family recipes & authentic techniques that you won't find anywhere else."/>
+          <ExtraInfoCard extraImg={salad1} heading="QUALITY FOOD" text="From toppings to our signature dough, every ingredient is carefully selected to ensure the perfect bite."/>
+          <ExtraInfoCard extraImg={delivery1} heading="FAST DELIVERY" text="Our team ensures your favorite pizza arrives piping hot and fresh at your door step in record time."/>
         </div>
     </>
   )

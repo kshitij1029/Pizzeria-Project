@@ -16,7 +16,7 @@ const Hero = () => {
             <div className='text-white flex flex-col w-[35%] items-start transition ease-in-out duration-200 delay-200 p-4'>
                 <h1 className='text-[70px] font-bold'>PIZZA TOWN</h1>
                 <h1 className='text-[30px] mb-8'>Witness the flavour of real pizza</h1>
-                <p className=' mb-9'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eos a facilis perferendis quidem. Officiis illum earum molestiae temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum earum consectetur et consequatur atque illum dolorem quae laudantium perferendis iure?</p>
+                <p className=' mb-9'>From our stone oven to your doorstep, we bring you the authentic taste of tradition. Every slice is crafted with hand-stretched dough, premium toppings, and a passion for the perfect crust. Grab your favorites today and taste the difference of real pizza. Order now and join the thousands of pizza lovers who call us their favorite slice in town.</p>
                 <Link to='Contact' smooth={true} offset={-90} duration={1000}><button className='bg-[#ffcc00] p-5 rounded-xl text-[#900000] font-bold mb-8 flex cursor-pointer shadow-md/50 shadow-black hover:scale-110 hover:transition hover:ease-in-out hover: duration-300'>ORDER NOW <div className=' ml-4 flex justify-center items-center rounded-4xl border-2 border-[#900000] animate-bounce'><i className="fa-solid fa-arrow-down text-[#900000]"></i></div></button></Link>
             </div>
           </div>

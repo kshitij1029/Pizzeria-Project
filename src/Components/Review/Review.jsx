@@ -6,7 +6,7 @@ import woman_1 from '../../assets/woman-1.png'
 import man_2 from '../../assets/man-2.jpg'
 
 const icon = [man_1, woman_1, man_2];
-const comment = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloribus unde. Dolores optio necessitatibus laboriosam.", "Lorem ipsum dolor, reswedif deifof ej;wfeiofhu Delectus deserunt dolorum nulla debitis suscipit alias qui voluptatibus reiciendis similique at.", "reserfatei dejfio amet fieofh dflsefio. kjefeuudswdjo, jeigfuebbo owefiuh  hoiwf  howi oo ifwoeh. nieofh fneo"];
+const comment = ["The best in town! I've tried pizzas all over the city, but nothing beats the authentic stone-baked flavor here. The Flowy Egg is a must-try for any egg lover.", "Pizza Town has become our go-to spot for family dinner. The ingredients are always fresh, the atmosphere is so welcoming, and that 30% discount on the app makes it such a great deal!", "Incredible service and even better food. I usually order for delivery, and it always arrives piping hot. Highly recommend the Pepperoni Feast for a satisfying meal."];
 const name = ["Alexander Barley", "Rosie Kooch", "Ralph Bekshaw"];
 
 const Review = () => {

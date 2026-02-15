@@ -5,15 +5,6 @@ import Cart from '../Cart/Cart';
 
 const Navbar = ({cart, updateQuantity, removeFromCart, total}) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-
-
-
-
-
-
-
-
-
   const [sticky, setSticky] = useState(false);
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
@@ -52,11 +43,11 @@ const Navbar = ({cart, updateQuantity, removeFromCart, total}) => {
 
       {isCartOpen && 
         <Cart
-        cart={cart}
-        updateQuantity={updateQuantity}
-        removeFromCart={removeFromCart}
-        total={total}
-        onClose={() => setIsCartOpen(false)}
+          cart={cart}
+          updateQuantity={updateQuantity}
+          removeFromCart={removeFromCart}
+          total={total}
+          onClose={() => setIsCartOpen(false)}
         />}
 
     </header>
