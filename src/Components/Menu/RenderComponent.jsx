@@ -6,9 +6,9 @@ import BreadsDips from '../Menu/Categories/BreadsDips'
 import Deserts from '../Menu/Categories/Deserts'
 
 
-const RenderComponent = ({index}) => {
+const RenderComponent = ({index, addToCart}) => {
   switch (index) {
-    case 0: return <NonVeg/>
+    case 0: return <NonVeg addToCart={addToCart}/>
         break;
     case 1: return <Veg/>
         break;

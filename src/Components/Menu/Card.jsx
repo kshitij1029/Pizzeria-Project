@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Card = ({image, head, ingredients, price, idx1}) => {
+const Card = ({image, head, ingredients, price, addToCart}) => {
     const [isHover, setIsHover] = useState(false);
     const appear =()=>{
        setIsHover(true);
@@ -18,7 +18,7 @@ const Card = ({image, head, ingredients, price, idx1}) => {
             </div>
             <div className='mt-3 flex justify-between cart'>
                 <div className='py-2 px-2 bg-[#ffcc00b8] rounded-xl text-[#900] font-bold font-sans'>Rs. {price}/-</div>
-                <button className={`py-2 px-4 bg-[#900] rounded-xl ${isHover ? "" : "hidden"} text-[14px] text-white font-bold cursor-pointer`}>ADD TO CART <i class="fa-solid fa-basket-shopping"></i></button>
+                <button className={`py-2 px-4 bg-[#900] rounded-xl ${isHover ? "" : "hidden"} text-[14px] text-white font-bold cursor-pointer`} onClick={addToCart}>ADD TO CART <i class="fa-solid fa-basket-shopping"></i></button>
             </div>
         </div>
     </div>
