@@ -5,7 +5,7 @@ import {Link} from 'react-scroll'
 
 const Hero = () => {
   return (
-    <div className="Hero h-screen w-full bg-cover flex justify-center items-center pt-14 " style={{backgroundImage: `url(${hero_back})`}}>
+    <div className="Hero h-screen  bg-cover flex justify-center items-center pt-14 " style={{backgroundImage: `url(${hero_back})`}}>
         <div className='flex justify-evenly items-center w-screen'>
           <div>
               <img className='h-150 w-190 min-w-180 min-h-120 transition ease-in-out duration-200 delay-100' src={hero_img}/>
