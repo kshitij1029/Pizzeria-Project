@@ -44,7 +44,7 @@ const Cart = ({cart, updateQuantity, removeFromCart, total, onClose}) => {
             <span>Total:</span>
             <span>Rs. {total}/-</span>
           </div>
-          <button className='w-full mt-4 py-2 bg-[#f08989] hover:bg-red-600 text-white font-bold'>Checkout</button>
+          <button className='w-full mt-4 py-2 bg-[#f08989] hover:bg-red-600 text-white font-bold cursor-pointer'>Checkout</button>
         </div>
       </div>
     </div>

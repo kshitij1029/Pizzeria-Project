@@ -14,7 +14,7 @@ const Navbar = ({cart, updateQuantity, removeFromCart, total}) => {
   return (
     <header>
         <div className={` flex justify-around p-2 items-center fixed top-0 right-0 left-0 z-30 transition ease-in-out duration-200 delay-75 ${sticky?"bg-[#ffcc00]":""}`}>
-          <img className='h-22 min-w-22 mr-2 cursor-pointer' src={logo}/>
+          <Link to='Hero' smooth={true} offset={0} duration={500}><img className='h-22 min-w-22 mr-2 cursor-pointer' src={logo}/></Link>
           <nav>
               <ul className={`flex justify-between p-2 flex-wrap  ${sticky?"text-[#e51010]":"text-white"} cursor-pointer`}>
                   <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Hero' smooth={true} offset={0} duration={500}>HOME</Link></li>
