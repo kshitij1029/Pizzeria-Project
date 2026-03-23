@@ -9,29 +9,50 @@ const arr = [offer_1, offer_2, offer_3, offer_4];
 
 const Sliding = () => {
   const [imgIdx, setImgIdx] = useState(0);
-  function moveRight(){
-    if(imgIdx<arr.length-2) setImgIdx(imgIdx+1);
-  }
-  function moveLeft(){
-    if(imgIdx>0) setImgIdx(imgIdx-1);
-  }
+  const scrollRef = React.useRef(null);
+
+  // Function to update dots based on scroll position
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, offsetWidth } = scrollRef.current;
+      const index = Math.round(scrollLeft / offsetWidth);
+      setImgIdx(index);
+    }
+  };
+
   return (
     <div className='flex flex-col justify-center items-center w-full'>
-      <div className='flex justify-evenly items-center w-full'>
-        <div className='bg-[#900] text-white rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer hover:scale-75 hover:transition hover:duration-300 hover:ease-in-out' onClick={moveLeft}>
-          <i className="fa-solid fa-less-than"></i>
-        </div>
-        <div className='flex w-7xl justify-between'>
-          <img className='h-100 w-155 ' src={arr[imgIdx]}/>
-          <img className='h-100 w-155 ' src={arr[imgIdx+1]}/>
-        </div>
-        <div className='bg-[#900] text-white rounded-4xl p-3 shadow-sm shadow-[black] cursor-pointer hover:scale-75 hover:transition hover:duration-300 hover:ease-in-out' onClick={moveRight}>
-          <i className="fa-solid fa-greater-than"></i>
-        </div>
+      {/* SCROLL CONTAINER:
+        - overflow-x-auto: Enables horizontal scrolling
+        - snap-x snap-mandatory: Makes images "snap" into place
+        - scrollbar-hide: (Optional) CSS to hide scrollbar visual
+      */}
+      <div 
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className='flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-4 px-4 md:px-10'
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} // Hides scrollbar for Firefox/IE
+      >
+        {arr.map((src, index) => (
+          <div 
+            key={index} 
+            className='min-w-[85%] md:min-w-[45%] lg:min-w-[48%] snap-center flex-shrink-0 transition-transform duration-500'
+          >
+            <img 
+              className='h-64 sm:h-80 md:h-100 w-full object-cover rounded-2xl shadow-xl pointer-events-none' 
+              src={src} 
+              alt={`Offer ${index + 1}`}
+            />
+          </div>
+        ))}
       </div>
-      <Dots index={imgIdx}/>
+
+      {/* DOTS: These now update automatically as you swipe */}
+      <div className='mt-8'>
+        <Dots index={imgIdx} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Sliding

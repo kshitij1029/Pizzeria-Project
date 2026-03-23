@@ -50,7 +50,7 @@ const Navbar = ({ cart, updateQuantity, removeFromCart, total }) => {
         </nav>
 
         {/* RIGHT SIDE ICONS (Cart & Toggle) */}
-        <div className="flex items-center gap-4 ml-[170px]">
+        <div className="flex items-center gap-4 ml-42.5">
           {/* CART BUTTON */}
           <button className={`relative font-bold cursor-pointer ${sticky ? "text-[#e51010]" : "text-white"}`} onClick={() => setIsCartOpen(true)}>
             <i className="fa-solid fa-cart-arrow-down text-[22px] md:text-[25px]"></i>

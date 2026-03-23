@@ -1,54 +1,107 @@
 import React from 'react'
 
-const Cart = ({cart, updateQuantity, removeFromCart, total, onClose}) => {
+const Cart = ({ cart, updateQuantity, removeFromCart, total, onClose }) => {
   return (
-    <div className={`fixed right-0 h-full bg-white w-80 z-50 flex flex-col justify-center`}>
-      <div className={` shadow-lg flex flex-col`}>
-        <div className={`p-4 flex justify-between items-start border-b`}>
-          <h2 className={`text-xl font-bold text-black`}>Cart</h2>
-          <button className={`text-red-600 hover:text-[#f08989]`} onClick={onClose}><i class="fa-solid fa-circle-xmark text-2xl"></i></button>
-        </div>
-      </div>
+    <>
+      {/* 1. BACKDROP OVERLAY: Dim the background when cart is open */}
+      <div 
+        className="fixed inset-0 bg-black/60 z-[60] backdrop-blur-sm transition-opacity"
+        onClick={onClose}
+      />
 
-      {/* Cart Items */}
-      <div className='flex-1 overflow-y-auto p-4 flex flex-col justify-between'>
-        <div>
+      {/* 2. CART DRAWER: 
+          - w-full on mobile, max-w-[400px] on larger screens 
+          - Higher z-index than the backdrop
+      */}
+      <div className={`fixed right-0 top-0 h-full bg-white w-full sm:w-[380px] md:w-[400px] z-[70] shadow-2xl flex flex-col transition-transform ease-in-out duration-500`}>
+        
+        {/* Header */}
+        <div className="p-5 flex items-center border-b bg-slate-50">
+          <div>
+            <h2 className="text-2xl font-black text-[#900000]">YOUR CART</h2>
+            <p className="text-xs text-slate-500 uppercase tracking-widest">
+              {cart.length} {cart.length === 1 ? 'Item' : 'Items'}
+            </p>
+          </div>
+          <button 
+            className="text-slate-400 hover:text-red-600 transition-colors p-2 ml-[190px]" 
+            onClick={onClose}
+          >
+            <i className="fa-solid fa-xmark text-2xl"></i>
+          </button>
+        </div>
+
+        {/* Cart Items Area */}
+        <div className="flex-1 overflow-y-auto custom-scrollbar">
           {cart.length === 0 ? (
-            <p className='text-slate-500 text center'>Your Cart is Empty !!</p>
+            <div className="h-full flex flex-col mt-20 ml-[140px] ">
+              <i className="fa-solid fa-cart-shopping text-6xl text-slate-200 mb-4 ml-7"></i>
+              <p className="text-slate-500 font-medium">Your cart is empty!</p>
+            </div>
           ) : (
-            cart.map((item) => (
-              <div key={item.id}
-              className='flex items-center gap-4 p-4 border-b border-slate-300'>
-                <img src={item.image} className='w-16 h-16 object-cover rounded'></img>
-                <div className='flex-1'>
-                  <h3 className={`text-sm font-bold`}>{item.name}</h3>
-                  <p className='text-xs my-1'>Rs. {item.price}/-</p>
-                  <div className='flex items-center mt-2 gap-2'>
-                    <button className='p-1 bg-slate-200 hover:bg-slate-400' onClick={() => updateQuantity(item.id,1)}>
-                      <i className="fa-solid fa-plus"></i>
-                    </button>
-                    <span className='px-2'>{item.quantity}</span>
-                    <button className='p-1 bg-slate-200 hover:bg-slate-400' onClick={() => updateQuantity(item.id,-1)}>
-                      <i className="fa-solid fa-minus"></i>
-                    </button>
+            <div className="divide-y divide-slate-100">
+              {cart.map((item) => (
+                <div key={item.id} className="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-20 h-20 object-cover rounded-xl shadow-sm" 
+                  />
+                  
+                  <div className="flex-1">
+                    <h3 className="text-sm md:text-base font-bold text-slate-800">{item.name}</h3>
+                    <p className="text-sm font-semibold text-[#900000] mt-1">Rs. {item.price}</p>
+                    
+                    {/* Quantity Controls */}
+                    <div className="flex items-center mt-3 bg-slate-100 w-fit rounded-lg overflow-hidden">
+                      <button 
+                        className="px-3 py-1 hover:bg-[#ffcc00] hover:text-[#900000] transition-colors"
+                        onClick={() => updateQuantity(item.id, -1)}
+                      >
+                        <i className="fa-solid fa-minus text-xs"></i>
+                      </button>
+                      <span className="px-3 text-sm font-bold">{item.quantity}</span>
+                      <button 
+                        className="px-3 py-1 hover:bg-[#ffcc00] hover:text-[#900000] transition-colors"
+                        onClick={() => updateQuantity(item.id, 1)}
+                      >
+                        <i className="fa-solid fa-plus text-xs"></i>
+                      </button>
+                    </div>
                   </div>
+
+                  <button 
+                    className="p-2 text-slate-300 hover:text-red-600 transition-colors" 
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    <i className="fa-solid fa-trash-can"></i>
+                  </button>
                 </div>
-                <button className='p-2 text-[#f08989] hover:text-red-600' onClick={() => removeFromCart(item.id)}><i className="fa-solid fa-trash"></i></button>
-              </div>
-            ))
+              ))}
+            </div>
           )}
         </div>
-        {/* Total */}
-        <div className='p-4 border-t border-slate-300'>
-          <div className='flex justify-between items-center text-lg font-bold'>
-            <span>Total:</span>
-            <span>Rs. {total}/-</span>
+
+        {/* Footer / Total Section */}
+        {cart.length > 0 && (
+          <div className="p-6 border-t bg-white shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-slate-500 font-medium">Subtotal</span>
+              <span className="text-xl font-black text-slate-900">Rs. {total}/-</span>
+            </div>
+            
+            <button className="w-full py-4 bg-[#ffcc00] hover:bg-[#900000] text-[#900000] hover:text-white rounded-2xl font-black text-lg transition-all duration-300 transform active:scale-95 shadow-lg shadow-yellow-200 lg:shadow-none">
+              CHECKOUT NOW
+            </button>
+            
+            <p className="text-[10px] text-center text-slate-400 mt-4 uppercase tracking-tighter">
+              Shipping and taxes calculated at checkout
+            </p>
           </div>
-          <button className='w-full mt-4 py-2 bg-[#f08989] hover:bg-red-600 text-white font-bold cursor-pointer'>Checkout</button>
-        </div>
+        )}
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
 export default Cart

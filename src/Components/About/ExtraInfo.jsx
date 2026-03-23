@@ -13,7 +13,7 @@ const ExtraInfo = () => {
           <img className='h-[32%] w-[32%]' src={pizza}/>
           <img className='h-[32%] w-[32%]' src={pizza}/>
         </div>
-        <div className='bg-[#ffcc00] flex p-10'>
+        <div className='bg-[#ffcc00] p-10 flex flex-col md:flex-row gap-4'>
           <ExtraInfoCard extraImg={pizza3} heading="ORIGINAL" text="True to our roots with secret family recipes & authentic techniques that you won't find anywhere else."/>
           <ExtraInfoCard extraImg={salad1} heading="QUALITY FOOD" text="From toppings to our signature dough, every ingredient is carefully selected to ensure the perfect bite."/>
           <ExtraInfoCard extraImg={delivery1} heading="FAST DELIVERY" text="Our team ensures your favorite pizza arrives piping hot and fresh at your door step in record time."/>
