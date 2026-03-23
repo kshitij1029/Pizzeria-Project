@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section 
       id='Contact' 
-      className='Contact flex justify-center items-center  md:p-12 bg-cover bg-top min-h-125 overflow-hidden' 
+      className='Contact flex justify-center items-center P-6 md:p-12 bg-cover bg-top min-h-125 overflow-hidden' 
       style={{backgroundImage: `url(${contact_back})` || 'none'}}
     >
         {/* - Changed w-[60%] to w-full with a max-width for desktop 
