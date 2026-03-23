@@ -21,7 +21,7 @@ const Hero = () => {
           {/* IMAGE BOX: Moves to top on mobile, left on desktop */}
           <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-1">
             <img 
-              className="w-full max-w-[400px] md:max-w-[550px] lg:max-w-full h-auto object-contain transition-transform duration-500 hover:scale-105" 
+              className="w-full max-w-100 md:max-w-137.5 lg:max-w-full h-auto object-contain transition-transform duration-500 hover:scale-105" 
               src={hero_img} 
               alt="Delicious Pizza"
             />

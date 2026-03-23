@@ -6,7 +6,7 @@ const Menu = ({ addToCart, products }) => {
   return (
     <div id='Menu' className='Menu flex flex-col items-center px-4 md:px-8 pt-12 md:pt-20'>
         {/* Responsive Heading: Scaled based on screen size */}
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#900000] to-[#e51010] text-center'>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-black bg-clip-text text-transparent bg-linear-to-r from-[#900000] to-[#e51010] text-center'>
           OUR EXCLUSIVE MENU
         </h1>
         

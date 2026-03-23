@@ -32,7 +32,7 @@ const Contact = () => {
           */}
           <div className='mt-10'>
             <img 
-              className='h-auto w-full max-w-[300px] md:max-w-[400px] animate-pizzaslide drop-shadow-xl' 
+              className='h-auto w-full max-w-75 md:max-w-100 animate-pizzaslide drop-shadow-xl' 
               src={contact} 
               alt="Delivery Bike"
             />

@@ -20,13 +20,13 @@ const Shop = () => {
               DOWNLOAD MOBILE APP AND
             </h2>
             
-            <h1 className='font-black bg-clip-text text-transparent bg-gradient-to-r from-[#281702] to-[#7d3b0f] text-3xl md:text-5xl lg:text-[50px] leading-tight mb-6 uppercase'>
+            <h1 className='font-black bg-clip-text text-transparent bg-linear-to-r from-[#281702] to-[#7d3b0f] text-3xl md:text-5xl lg:text-[50px] leading-tight mb-6 uppercase'>
               AVAIL MORE EXCITING DISCOUNTS
             </h1>
             
             <p className='text-[#6f2f03] text-sm md:text-base lg:text-lg leading-relaxed max-w-xl'>
               Join our growing community of pizza lovers to unlock lightning-fast ordering, 
-              real-time delivery tracking, and exclusive rewards you won’t find anywhere else. 
+              real-time delivery tracking, and exclusive rewards you won't find anywhere else. 
               Download today to turn every bite into points and every meal into a deal.
             </p>
             
@@ -52,7 +52,7 @@ const Shop = () => {
         */}
         <div className='w-full lg:w-[40%] flex justify-center lg:justify-end'>
             <img 
-              className='h-auto w-full max-w-[200px] md:max-w-[350px] lg:max-w-full drop-shadow-2xl animate-float' 
+              className='h-auto w-full max-w-50 md:max-w-87.5 lg:max-w-full drop-shadow-2xl animate-float' 
               src={shop} 
               alt="Mobile App Preview"
             />

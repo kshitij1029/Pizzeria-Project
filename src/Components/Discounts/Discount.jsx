@@ -4,13 +4,13 @@ import Sliding from './Sliding'
 
 const Discount = () => {
   return (
-    <section id="Discount" className='Discount flex flex-col justify-center items-center min-h-[500px] md:min-h-[640px] py-10 px-4 mb-3 overflow-hidden'>
+    <section id="Discount" className='Discount flex flex-col justify-center items-center min-h-125 md:min-h-160 py-10 px-4 mb-3 overflow-hidden'>
         
         {/* Header Container: Centered for all screens */}
         <div className='flex flex-col items-center text-center mb-10'>
           
           {/* Responsive Heading: Larger on desktop, perfectly sized for mobile */}
-          <h1 className='text-3xl md:text-4xl lg:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#900000] to-[#e51010] uppercase tracking-tight'>
+          <h1 className='text-3xl md:text-4xl lg:text-5xl font-black bg-clip-text text-transparent bg-linear-to-r from-[#900000] to-[#e51010] uppercase tracking-tight'>
             LATEST DISCOUNTS
           </h1>
           
