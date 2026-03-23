@@ -73,7 +73,7 @@ const Navbar = ({ cart, updateQuantity, removeFromCart, total }) => {
 
       {/* MOBILE MENU OVERLAY */}
       <div className={`fixed inset-0 bg-black/90 z-40 lg:hidden flex flex-col items-center transition-transform pt-20 pr-8 duration-500 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <ul className="text-white text-end flex flex-col gap-8 text-xl font-bold">
+        <ul className="text-white text-center flex flex-col gap-8 text-xl font-bold">
           {navLinks.map((link) => (
             <li key={link.title} onClick={closeMenu}>
               <Link to={link.to} smooth={true} offset={link.offset} duration={500} className="hover:text-[#ffcc00] transition-colors uppercase">
