@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @layer utilities{
     .nav1::after{
         @apply content-[''] bg-amber-400 h-0.75 w-[0%] left-0 bottom-0 rounded-xl absolute duration-300

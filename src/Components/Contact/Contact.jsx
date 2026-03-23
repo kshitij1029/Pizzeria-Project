@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section 
       id='Contact' 
-      className='Contact flex justify-center items-center p-6 md:p-12 bg-cover bg-center min-h-[500px] overflow-hidden' 
+      className='Contact flex justify-center items-center  md:p-12 bg-cover bg-top min-h-125 overflow-hidden' 
       style={{backgroundImage: `url(${contact_back})` || 'none'}}
     >
         {/* - Changed w-[60%] to w-full with a max-width for desktop 
@@ -14,11 +14,11 @@ const Contact = () => {
         */}
         <div className='flex flex-col items-center w-full max-w-4xl px-4'>
           
-          <h1 className='font-black text-cyan-900 text-center leading-tight mt-5 text-3xl md:text-5xl lg:text-6xl drop-shadow-sm'>
+          <h1 className='font-black text-cyan-900 text-center leading-tight text-3xl md:text-5xl lg:text-6xl drop-shadow-sm'>
             DELIVERY IN 30 MIN !!
           </h1>
           
-          <p className='text-center mt-6 text-sm md:text-base lg:text-lg text-slate-800 leading-relaxed max-w-2xl'>
+          <p className='text-center mt-6 text-sm md:text-base lg:text-md text-slate-800 leading-relaxed max-w-2xl'>
             Hunger can't wait, and neither do we. Our dedicated delivery fleet is always on standby to ensure your favorite hand-stretched pizzas and snacks reach your doorstep in 30 minutes or less. Fresh, hot, and fast—just the way a Pizza Town slice should be.
           </p>
           

@@ -76,7 +76,7 @@ const Navbar = ({ cart, updateQuantity, removeFromCart, total }) => {
         <ul className="text-white text-center flex flex-col gap-8 text-xl font-bold">
           {navLinks.map((link) => (
             <li key={link.title} onClick={closeMenu}>
-              <Link to={link.to} smooth={true} offset={link.offset} duration={500} className="hover:text-[#ffcc00] transition-colors uppercase">
+              <Link to={link.to} smooth={true} offset={link.offset} duration={500} className="hover:text-[#ffcc00] transition-colors uppercase Bebas">
                 {link.title}
               </Link>
             </li>

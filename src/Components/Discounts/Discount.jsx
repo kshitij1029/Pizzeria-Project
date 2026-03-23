@@ -15,8 +15,8 @@ const Discount = () => {
           </h1>
           
           {/* Responsive Subtext: Added max-width to prevent long lines on wide screens */}
-          <p className='text-sm md:text-lg lg:text-xl font-medium mt-3 max-w-2xl text-slate-700'>
-            Being Pocket Friendly? Avail these before it's too late. <br className="hidden md:block" />
+          <p className='text-sm md:text-lg lg:text-lg font-medium mt-3 max-w-2xl text-slate-700'>
+            Being Pocket Friendly? Avail these before it's too late.
             Offers worth giving a shot!!
           </p>
           

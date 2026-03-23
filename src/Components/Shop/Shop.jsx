@@ -9,7 +9,7 @@ const Shop = () => {
       {/* - flex-col for mobile, lg:flex-row for desktop 
           - items-center ensures everything looks balanced when stacked
       */}
-      <div className='max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12'>
+      <div className='max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12'>
         
         {/* TEXT CONTENT 
             - w-full on mobile, lg:w-[55%] on desktop
@@ -52,7 +52,7 @@ const Shop = () => {
         */}
         <div className='w-full lg:w-[40%] flex justify-center lg:justify-end'>
             <img 
-              className='h-auto w-full max-w-[300px] md:max-w-[450px] lg:max-w-full drop-shadow-2xl animate-float' 
+              className='h-auto w-full max-w-[200px] md:max-w-[350px] lg:max-w-full drop-shadow-2xl animate-float' 
               src={shop} 
               alt="Mobile App Preview"
             />

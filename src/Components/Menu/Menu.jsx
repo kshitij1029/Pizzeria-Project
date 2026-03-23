@@ -11,7 +11,7 @@ const Menu = ({ addToCart, products }) => {
         </h1>
         
         {/* Subheadings: Adjusted for mobile readability */}
-        <p className='text-lg md:text-xl lg:text-2xl font-semibold mt-4 text-center'>
+        <p className='text-lg md:text-xl lg:text-xl font-semibold mt-4 text-center lg:text-slate-700'>
           Enjoy our wide range of Pizza's and other Snacks!!
         </p>
         
