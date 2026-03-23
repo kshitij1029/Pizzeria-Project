@@ -34,7 +34,7 @@ const Cart = ({ cart, updateQuantity, removeFromCart, total, onClose }) => {
         {/* Cart Items Area */}
         <div className="flex-1 overflow-y-auto custom-scrollbar">
           {cart.length === 0 ? (
-            <div className="h-full flex flex-col mt-20 ml-[80px] ">
+            <div className="h-full flex flex-col mt-20 ml-[120px] ">
               <i className="fa-solid fa-cart-shopping text-6xl text-slate-200 mb-4 ml-4"></i>
               <p className="text-slate-500 font-medium">Your cart is empty!</p>
             </div>
