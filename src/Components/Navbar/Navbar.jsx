@@ -3,44 +3,88 @@ import logo from '../../assets/logo.png'
 import {Link} from 'react-scroll'
 import Cart from '../Cart/Cart';
 
-const Navbar = ({cart, updateQuantity, removeFromCart, total}) => {
+const Navbar = ({ cart, updateQuantity, removeFromCart, total }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
   const [sticky, setSticky] = useState(false);
-  useEffect(()=>{
-    window.addEventListener('scroll',()=>{
-      window.scrollY>50 ? setSticky(true) : setSticky(false);
-    })
-  },[])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Helper to close menu when a link is clicked
+  const closeMenu = () => setMenuOpen(false);
+
+  const navLinks = [
+    { title: 'HOME', to: 'Hero', offset: 0 },
+    { title: 'ABOUT', to: 'About', offset: -100 },
+    { title: 'OUR MENU', to: 'Menu', offset: -100 },
+    { title: 'DISCOUNTS', to: 'Discount', offset: -90 },
+    { title: 'SHOP', to: 'Shop', offset: -100 },
+    { title: 'REVIEWS', to: 'Review', offset: -80 },
+    { title: 'CONTACT US', to: 'Contact', offset: -90 },
+  ];
+
   return (
     <header>
-        <div className={` flex justify-around p-2 items-center fixed top-0 right-0 left-0 z-30 transition ease-in-out duration-200 delay-75 ${sticky?"bg-[#ffcc00]":""}`}>
-          <Link to='Hero' smooth={true} offset={0} duration={500}><img className='h-22 min-w-22 mr-2 cursor-pointer' src={logo}/></Link>
-          <nav>
-              <ul className={`flex justify-between p-2 flex-wrap  ${sticky?"text-[#e51010]":"text-white"} cursor-pointer`}>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Hero' smooth={true} offset={0} duration={500}>HOME</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='About' smooth={true} offset={-100} duration={500}>ABOUT</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Menu' smooth={true} offset={-100} duration={500}>OUR MENU</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Discount' smooth={true} offset={-90} duration={500}>DISCOUNTS</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Shop' smooth={true} offset={-100} duration={500}>SHOP</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Review' smooth={true} offset={-80} duration={500}>REVIEWS</Link></li>
-                  <li className={`mx-4 relative ${sticky?"nav2":"nav1"} text-[16px] font-bold`}><Link to='Contact' smooth={true} offset={-90} duration={500}>CONTACT US</Link></li>
+      <div className={`flex md:justify-around px-6 py-4 items-center fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? "bg-[#ffcc00] shadow-md" : "bg-transparent"}`}>
+        
+        {/* LOGO - Adjusted for responsiveness */}
+        <Link to='Hero' smooth={true} offset={0} duration={500}>
+          <img className='h-14 md:h-20 w-auto cursor-pointer object-contain' src={logo} alt="Logo" />
+        </Link>
 
-                  <div className='flex items-center'>
-                    <button className=' relative mx-4 pb-1.5 text-[16px] font-bold cursor-pointer' onClick={() => setIsCartOpen(true)}>
-                      <i className="  fa-solid fa-cart-arrow-down text-[25px]"></i>
-                      {cart.length>0 && (
-                        <span className='absolute -top-3 -right-3 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center'>
-                            {cart.reduce((sum, item) => sum+item.quantity, 0)}
-                        </span>
-                      )}
-                    </button>
-                  </div>
+        {/* DESKTOP NAVIGATION - Hidden on Mobile (hidden), flex on Medium (md) */}
+        <nav className="hidden lg:flex items-center">
+          <ul className={`flex items-center gap-2 ${sticky ? "text-[#e51010]" : "text-white"}`}>
+            {navLinks.map((link) => (
+              <li key={link.title} className={`mx-2 relative ${sticky ? "nav2" : "nav1"} text-[14px] xl:text-[16px] font-bold cursor-pointer hover:opacity-80`}>
+                <Link to={link.to} smooth={true} offset={link.offset} duration={500}>{link.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-              </ul>
-          </nav>
+        {/* RIGHT SIDE ICONS (Cart & Toggle) */}
+        <div className="flex items-center gap-4 ml-[170px]">
+          {/* CART BUTTON */}
+          <button className={`relative font-bold cursor-pointer ${sticky ? "text-[#e51010]" : "text-white"}`} onClick={() => setIsCartOpen(true)}>
+            <i className="fa-solid fa-cart-arrow-down text-[22px] md:text-[25px]"></i>
+            {cart.length > 0 && (
+              <span className='absolute -top-2 -right-3 bg-red-600 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center border-2 border-white'>
+                {cart.reduce((sum, item) => sum + item.quantity, 0)}
+              </span>
+            )}
+          </button>
+
+          {/* MOBILE TOGGLE BUTTON - Shown only on Mobile */}
+          <button 
+            className={`lg:hidden text-2xl cursor-pointer ${sticky ? "text-[#e51010]" : "text-white"}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <i className={menuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+          </button>
+        </div>
       </div>
 
+      {/* MOBILE MENU OVERLAY */}
+      <div className={`fixed inset-0 bg-black/90 z-40 lg:hidden flex flex-col items-center transition-transform pt-20 pr-8 duration-500 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <ul className="text-white text-end flex flex-col gap-8 text-xl font-bold">
+          {navLinks.map((link) => (
+            <li key={link.title} onClick={closeMenu}>
+              <Link to={link.to} smooth={true} offset={link.offset} duration={500} className="hover:text-[#ffcc00] transition-colors uppercase">
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
+      {/* CART OVERLAY (unchanged logic) */}
       {isCartOpen && 
         <Cart
           cart={cart}
@@ -49,9 +93,7 @@ const Navbar = ({cart, updateQuantity, removeFromCart, total}) => {
           total={total}
           onClose={() => setIsCartOpen(false)}
         />}
-
     </header>
-  )
-}
-
-export default Navbar
+  );
+};
+export default Navbar;

@@ -9,7 +9,7 @@ const Card = ({image, head, ingredients, price, addToCart}) => {
         setIsHover(false);
     }
   return (
-    <div className='flex flex-col rounded-xl mx-7 my-7 shadow-md shadow-slate-400 hover:scale-105 transition-[0.5s] w-65' onMouseEnter={appear} onMouseLeave={disappear}>
+    <div className='flex flex-col rounded-xl mx-7 my-7 shadow-md shadow-slate-400 hover:scale-105 transition-[1s] w-65' onMouseEnter={appear} onMouseLeave={disappear}>
         <img className='h-60 w-65 rounded-tl-xl rounded-tr-xl object-cover' src={image}/>
         <div className='px-2 pb-2 flex flex-col justify-between h-36'>
             <div>
