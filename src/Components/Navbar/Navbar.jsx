@@ -31,7 +31,7 @@ const Navbar = ({ cart, updateQuantity, removeFromCart, total }) => {
 
   return (
     <header>
-      <div className={`flex md:justify-around px-6 py-4 items-center fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? "bg-[#ffcc00] shadow-md" : "bg-transparent"}`}>
+      <div className={`flex md:justify-around px-6 py-2 items-center fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? "bg-[#ffcc00] shadow-md" : "bg-transparent"}`}>
         
         {/* LOGO - Adjusted for responsiveness */}
         <Link to='Hero' smooth={true} offset={0} duration={500}>
