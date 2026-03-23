@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Comments from './Comments'
-import Dots2 from './Dots2'
 import man_1 from '../../assets/man-1.jpg'
 import woman_1 from '../../assets/woman-1.png'
 import man_2 from '../../assets/man-2.jpg'
@@ -34,7 +33,6 @@ const Review = () => {
             <i className='text-slate-300 hover:text-white fa-solid fa-greater-than text-xl' ></i>
           </div>
         </div>
-        <Dots2 index={isIndex}/>
     </div>
   )
 }
